@@ -149,7 +149,10 @@ class Instructor extends Lambdasian {
     return `${student.name} receives a perfect score on ${subject}`;
   }
 
-  addSubGrade(points) {}
+  addSubGrade(student) {
+    var points = Math.round(Math.random()) * 2 - 1;
+    if (student.grade) return student.grade + points;
+  }
 }
 
 /*
